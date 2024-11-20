@@ -1,7 +1,6 @@
 # **GraphQL CRUD Application with Spring Boot**
 
 This project is a simple **CRUD application** built with **Spring Boot** and **GraphQL**, showcasing how to manage products using modern GraphQL queries and mutations. The project adheres to **clean code principles** and uses **H2 database** for development.
-
 ---
 
 ## **Table of Contents**
@@ -14,7 +13,6 @@ This project is a simple **CRUD application** built with **Spring Boot** and **G
     - [GraphQL Endpoints](#graphql-endpoints)
     - [Testing with Postman](#testing-with-postman)
     - [GraphiQL Interface](#graphiql-interface)
-
 ---
 
 ## **Features**
@@ -23,7 +21,6 @@ This project is a simple **CRUD application** built with **Spring Boot** and **G
 - Integrated **GraphiQL interface** for testing.
 - **H2 in-memory database** for easy development and testing.
 - Follows **clean code** and **best practices**.
-
 ---
 
 ## **Technologies Used**
@@ -33,11 +30,9 @@ This project is a simple **CRUD application** built with **Spring Boot** and **G
 - **H2 Database**
 - **Lombok**
 - **Maven**
-
 ---
 
 ## **Getting Started**
-
 ### **Prerequisites**
 1. **Java 17** or higher installed on your system.
 2. **Maven** (v3.x or higher) installed.
@@ -61,7 +56,6 @@ This project is a simple **CRUD application** built with **Spring Boot** and **G
 4. Access the application:
    * GraphQL endpoint: http://localhost:8080/graphql
    * GraphiQL interface: http://localhost:8080/graphiql?path=/graphql
-
 ---
 
 ## **Usage**
