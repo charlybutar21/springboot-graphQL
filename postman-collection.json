@@ -1,0 +1,123 @@
+{
+    "info": {
+        "name": "GraphQL CRUD",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Products",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"query\": \"query { getAllProducts { id name description price } }\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/graphql",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["graphql"]
+                }
+            }
+        },
+        {
+            "name": "Get Product By ID",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"query\": \"query ($id: ID!) { getProductById(id: $id) { id name description price } }\",\n    \"variables\": { \"id\": \"1\" }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/graphql",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["graphql"]
+                }
+            }
+        },
+        {
+            "name": "Create Product",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"query\": \"mutation ($input: ProductInput!) { createProduct(input: $input) { id name description price } }\",\n    \"variables\": { \"input\": { \"name\": \"Keyboard\", \"description\": \"Mechanical keyboard\", \"price\": 75.0 } }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/graphql",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["graphql"]
+                }
+            }
+        },
+        {
+            "name": "Update Product",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"query\": \"mutation ($id: ID!, $input: ProductInput!) { updateProduct(id: $id, input: $input) { id name description price } }\",\n    \"variables\": { \"id\": \"1\", \"input\": { \"name\": \"Updated Keyboard\", \"description\": \"Updated mechanical keyboard\", \"price\": 100.0 } }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/graphql",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["graphql"]
+                }
+            }
+        },
+        {
+            "name": "Delete Product",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"query\": \"mutation ($id: ID!) { deleteProduct(id: $id) }\",\n    \"variables\": { \"id\": \"1\" }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/graphql",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["graphql"]
+                }
+            }
+        }
+    ]
+}
