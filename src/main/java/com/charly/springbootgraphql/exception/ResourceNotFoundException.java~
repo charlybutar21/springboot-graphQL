@@ -1,7 +1,0 @@
-package com.charly.springbootgraphql.exception;
-
-public class ResourceNotFoundException extends X {
-    public ResourceNotFoundException(String message) {
-        super(message);
-    }
-}
