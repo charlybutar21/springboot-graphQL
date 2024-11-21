@@ -1,4 +1,0 @@
-package com.charly.springbootgraphql.controller;
-
-public class ProductGraphQLController {
-}
